@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-primary: #6145ff;
+  --color-text: #0d0c54;
+  --color-des: #40406a;
+  --color-bg: #0a0618;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+}
+.max-w-primary {
+  max-width: 1220px;
+}
+
+@theme inline {
+  --animate-shine: shine var(--duration) infinite linear;
+
+  @keyframes shine {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    to {
+      background-position: 0% 0%;
+    }
+  }
+}
+
+* {
+  outline: none;
+}
+
+.inShadow:hover {
+  box-shadow: inset 0 0 0 5px rgba(240, 240, 240, 0.103);
+}
