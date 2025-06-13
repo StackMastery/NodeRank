@@ -68,7 +68,7 @@ const Hero = () => {
           />
         </svg>
 
-        <div className="max-w-primary flex flex-col items-center gap-5 px-5 py-40 relative z-10">
+        <div className="max-w-primary flex flex-col items-center gap-5 px-5 py-40 pt-56 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -77,7 +77,7 @@ const Hero = () => {
               duration: 0.5,
               ease: "easeOut",
             }}
-            className="flex flex-col items-center gap-5"
+            className="flex flex-col items-center gap-5 max-[765px]:pb-10"
           >
             <Text variant="h1" className="text-white max-w-[630px] text-center">
               {HeroData.title}
@@ -90,7 +90,7 @@ const Hero = () => {
             </Text>
             <div className="flex flex-wrap justify-center items-center gap-3 pb-5">
               <Link href={"/dashboard"} className="max-[300px]:w-full">
-                <Button className=" relative border-0 max-[300px]:w-full">
+                <Button className="border-0 max-[300px]:w-full">
                   Get Started{" "}
                   <BorderBeam
                     duration={5}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Syne } from "next/font/google";
 import "./globals.css";
+import Header from "./components/layout/Header/Header";
 
 const reThink = Syne({
   subsets: ["latin"],
@@ -16,8 +17,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-arp="">
-      <body className={`${reThink.className} antialiased`}>{children}</body>
+    <html lang="en" data-arp="" data-gr-ext-installed="">
+      <body className={`${reThink.className} antialiased`}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
